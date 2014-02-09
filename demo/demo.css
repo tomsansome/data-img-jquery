@@ -1,0 +1,37 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+html, body {
+  font: 400 18px/1.5em 'PT Sans', sans-serif;
+  height: 100%;
+background: #f1f1f1;
+background: -moz-linear-gradient(top,  #f1f1f1 0%, #deb887 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#deb887));
+background: -webkit-linear-gradient(top,  #f1f1f1 0%,#deb887 100%);
+background: -o-linear-gradient(top,  #f1f1f1 0%,#deb887 100%);
+background: -ms-linear-gradient(top,  #f1f1f1 0%,#deb887 100%);
+background: linear-gradient(to bottom,  #f1f1f1 0%,#deb887 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#deb887',GradientType=0 );
+}
+
+img {
+  width: 100%;
+  max-width: 1000px;
+}
+
+#wrapper {
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+#wrapper .title {
+  margin: 60px 0 10px 0;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#wrapper .byline {
+  width: 400px;
+  margin: 0 auto 50px auto;
+}
