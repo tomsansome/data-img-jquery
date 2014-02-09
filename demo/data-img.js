@@ -22,23 +22,19 @@ $.fn.dataImg = function(options) {
     if (screen > settings.lrg) {
       var size = This.data('lrg');
       resize(size);
-      console.log('smaller than lrg', size);
     }
 
     if (screen < settings.lrg) {
       var size = This.data('lrg');
       resize(size);
-      console.log('smaller than lrg', size);
     }
     if (screen < settings.med) {
       var size = This.data('med');
       resize(size);
-      console.log('smaller than med', size);
     }
     if (screen < settings.sml) {
       var size = This.data('sml');
       resize(size);
-      console.log('smaller than med', size);
     }
 
   }breakpoints();

@@ -3,35 +3,77 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html, body {
   font: 400 18px/1.5em 'PT Sans', sans-serif;
   height: 100%;
-background: #f1f1f1;
-background: -moz-linear-gradient(top,  #f1f1f1 0%, #deb887 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#deb887));
-background: -webkit-linear-gradient(top,  #f1f1f1 0%,#deb887 100%);
-background: -o-linear-gradient(top,  #f1f1f1 0%,#deb887 100%);
-background: -ms-linear-gradient(top,  #f1f1f1 0%,#deb887 100%);
-background: linear-gradient(to bottom,  #f1f1f1 0%,#deb887 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#deb887',GradientType=0 );
+  background: #fafafa;
+  background: -moz-linear-gradient(top,  #fafafa 0%, #deb887 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#deb887));
+  background: -webkit-linear-gradient(top,  #fafafa 0%,#deb887 100%);
+  background: -o-linear-gradient(top,  #fafafa 0%,#deb887 100%);
+  background: -ms-linear-gradient(top,  #fafafa 0%,#deb887 100%);
+  background: linear-gradient(to bottom,  #fafafa 0%,#deb887 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#deb887',GradientType=0 );
+  background-attachment: fixed;
 }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+::selection { background: #ccc; }
+::-moz-selection { background: #ccc; }
 
 img {
   width: 100%;
   max-width: 1000px;
+  margin: 60px 0 20px 0;
 }
 
 #wrapper {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: auto;
-  text-align: center;
+  padding-bottom: 100px;
 }
 
-#wrapper .title {
+.title, .byline {
+  padding: 0 20px;
+}
+
+.title {
   margin: 60px 0 10px 0;
   font-size: 40px;
   font-weight: 700;
+  line-height: 1.1em;
   text-transform: uppercase;
+  text-align: center;
 }
 
-#wrapper .byline {
-  width: 400px;
-  margin: 0 auto 50px auto;
+.byline {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.need-to-know li {
+  margin: 40px 0;
+}
+
+.need-to-know li h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.need-to-know li p {
+  font-size: 16px;
+}
+
+code, pre {
+  display: block;
+  background: rgba(255,255,255,0.5);
+  padding: 4px 10px;
+  font-family: monospace;
+  font-size: 14px;
+  margin: 5px 0 0 0;
 }

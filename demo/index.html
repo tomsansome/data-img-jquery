@@ -11,16 +11,35 @@
 
   <div id="wrapper">
 
-    <h1 class="title">Data Image Plugin</h1>
+    <h1 class="title">Data Image Delivery</h1>
     <h2 class="byline">Small plugin to deal with responsive image delivery. Think responsive.io minus the cdn.</h2>
 
-  
     <img 
       src="http://placehold.it/1x1"
       data-sml="img/400x320.jpg"
       data-med="img/800x640.jpg"
       data-lrg="img/1000x800.jpg"
     >
+
+    <ul class="need-to-know">
+      <li>
+        <h3>Usage</h3>
+        <code>$('img').dataImg();</code>
+      </li>
+
+      <li>
+        <h3>Usage with options</h3>
+        <p>Small, Medium and Large breakpoints. On window resize.</p>
+<pre>
+$('img').dataImg({
+  sml: 400,
+  med: 800,
+  lrg: 1000,
+  resize: true
+});
+</pre>
+      </li>
+    </ul>
 
   </div>
 
