@@ -3,6 +3,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html, body {
   font: 400 18px/1.5em 'PT Sans', sans-serif;
   height: 100%;
+  color: #333;
   background: #fafafa;
   background: -moz-linear-gradient(top,  #fafafa 0%, #deb887 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#deb887));
@@ -18,6 +19,7 @@ html, body {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 ::selection { background: #ccc; }
@@ -34,6 +36,22 @@ img {
   max-width: 1000px;
   margin: auto;
   padding-bottom: 100px;
+}
+
+.download {
+  position: fixed;
+  top: 20px; right: 20px;
+  width: 80px; height: 80px;
+  background: url('img/download.svg');
+  background-size: 80px 80px;
+}
+.download small {
+  position: absolute;
+  top: 80px;
+  left: 24px;
+  font-size: 13px;
+  font-style: italic;
+  color: #333;
 }
 
 .title, .byline {
