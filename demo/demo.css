@@ -52,7 +52,7 @@ a { color: #333; }
 .download small {
   position: absolute;
   top: 80px;
-  left: 24px;
+  left: 22px;
   font-size: 13px;
   font-style: italic;
   color: #333;
@@ -73,7 +73,7 @@ a { color: #333; }
 
 .byline {
   width: 100%;
-  max-width: 400px;
+  max-width: 440px;
   margin: 0 auto;
   text-align: center;
 }
@@ -109,6 +109,13 @@ code, pre {
   font-size: 14px;
   margin: 5px 0 0 0;
 }
+pre {
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+}
 
 .open p {
   font-size: 13px !important;
@@ -125,10 +132,11 @@ code, pre {
     background: none;
     display: block;
     margin: 20px auto 0 auto;
+    text-decoration: underline;
   }
   .download small {
     position: static;
-    margin-left: 10px;
+    padding-left: 5px;
   }
   .data-img {
     margin-top: 20px;
