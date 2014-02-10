@@ -1,4 +1,4 @@
-A small plugin to deal nicely with responsive images. This is in super-alpha.
+A small plugin to deal with responsive image delivery depending on screen width.
 
 #### [http://dev.twoblok.es/data-img](http://dev.twoblok.es/data-img/)
 
