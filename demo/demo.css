@@ -87,6 +87,16 @@ img {
   font-size: 16px;
 }
 
+.need-to-know li ul {
+  list-style: circle;
+}
+.need-to-know li ul li {
+  margin: 0 0 0 20px;
+}
+.need-to-know li ul li strong {
+  font-weight: bold;
+}
+
 code, pre {
   display: block;
   background: rgba(255,255,255,0.5);
@@ -94,4 +104,8 @@ code, pre {
   font-family: monospace;
   font-size: 14px;
   margin: 5px 0 0 0;
+}
+
+.open p {
+  font-size: 13px !important;
 }
