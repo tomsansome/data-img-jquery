@@ -125,6 +125,13 @@ pre {
   text-align: center;
 }
 
+.image-credit {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+}
+
 @media all and (max-width: 1000px) {
   .download {
     position: static;
