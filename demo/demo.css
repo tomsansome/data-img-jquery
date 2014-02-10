@@ -22,10 +22,12 @@ html, body {
   text-decoration: none;
 }
 
+a { color: #333; }
+
 ::selection { background: #ccc; }
 ::-moz-selection { background: #ccc; }
 
-img {
+.data-img {
   width: 100%;
   max-width: 1000px;
   margin: 60px 0 20px 0;
@@ -44,6 +46,8 @@ img {
   width: 80px; height: 80px;
   background: url('img/download.svg');
   background-size: 80px 80px;
+  font-size: 0;
+  text-align: center;
 }
 .download small {
   position: absolute;
@@ -108,4 +112,31 @@ code, pre {
 
 .open p {
   font-size: 13px !important;
+}
+
+.logo {
+  text-align: center;
+}
+
+@media all and (max-width: 1000px) {
+  .download {
+    position: static;
+    font-size: 18px;
+    background: none;
+    display: block;
+    margin: 20px auto 0 auto;
+  }
+  .download small {
+    position: static;
+    margin-left: 10px;
+  }
+  .data-img {
+    margin-top: 20px;
+  }
+
+  .need-to-know li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
 }
