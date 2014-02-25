@@ -1,48 +1,47 @@
-$.fn.dataImg = function(options) {
+$.fn.dataImg = function (options) {
 
-  var settings = $.extend({
-    sml: 400,
-    med: 800,
-    lrg: 1000,
-    resize: false
-  }, options );
+    var settings = $.extend({
+        sml: 400,
+        med: 800,
+        lrg: 1000,
+        resize: false
+    }, options);
 
-  This = $(this);
+    This = $(this);
 
-  function resize(size) {
-    This.each(function() {
-      This.attr('src', size);
-    });
-  }
-
-  function breakpoints() {
-
-    var screen = $(window).width();
-
-    if (screen > settings.lrg) {
-      var size = This.data('lrg');
-      resize(size);
+    function resize(size) {
+        This.each(function (i, v) {
+            var e = $(v);
+            if (e.is('img')) {
+                e.attr('src', size);
+            } else {
+                e.css('background-image', 'url(' + size + ')');
+            }
+        });
     }
 
-    if (screen < settings.lrg) {
-      var size = This.data('lrg');
-      resize(size);
-    }
-    if (screen < settings.med) {
-      var size = This.data('med');
-      resize(size);
-    }
-    if (screen < settings.sml) {
-      var size = This.data('sml');
-      resize(size);
-    }
+    function breakpoints() {
 
-  }breakpoints();
+        var screen = $(window).width();
+        var size;
+        if (screen > settings.med) {
+            size = This.data('lrg');
+        }
+        else if (screen <= settings.med && screen > settings.sml) {
+            size = This.data('med');
+        }
+        else {
+            size = This.data('sml');
+        }
+        if (size !== undefined) {
+            resize(size);
+        }
 
-  if(settings.resize == true){
-    $(window).resize(function(){
-      breakpoints();
-    });
-  }
+    } breakpoints();
 
+    if (settings.resize == true) {
+        $(window).resize(function () {
+            breakpoints();
+        });
+    }
 };
