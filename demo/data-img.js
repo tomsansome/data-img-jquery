@@ -7,36 +7,29 @@ $.fn.dataImg = function (options) {
         resize: false
     }, options);
 
-    This = $(this);
+    var elements = $(this);
 
-    function resize(size) {
-        This.each(function (i, v) {
-            var e = $(v);
-            if (e.is('img')) {
-                e.attr('src', size);
-            } else {
-                e.css('background-image', 'url(' + size + ')');
-            }
-        });
+    function getSrc(element) {
+        var screen = $(window).width();
+        if (screen > settings.med) {
+            return element.data('lrg');
+        }
+        else if (screen <= settings.med && screen > settings.sml) {
+            return element.data('med');
+        }
+        return element.data('sml');
     }
 
     function breakpoints() {
-
-        var screen = $(window).width();
-        var size;
-        if (screen > settings.med) {
-            size = This.data('lrg');
-        }
-        else if (screen <= settings.med && screen > settings.sml) {
-            size = This.data('med');
-        }
-        else {
-            size = This.data('sml');
-        }
-        if (size !== undefined) {
-            resize(size);
-        }
-
+        elements.each(function () {
+            var e = $(this);
+            var src = getSrc(e);
+            if (e.is('img')) {
+                e.attr('src', src);
+            } else {
+                e.css('background-image', 'url(' + src + ')');
+            }
+        });
     } breakpoints();
 
     if (settings.resize == true) {
