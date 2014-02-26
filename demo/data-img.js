@@ -7,7 +7,7 @@ $.fn.dataImg = function(options) {
     resize: false
   }, options );
 
-  This = $(this);
+  var This = $(this);
 
   function resize(size) {
     This.each(function() {
