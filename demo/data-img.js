@@ -7,6 +7,7 @@ $.fn.dataImg = function(options) {
     resize: false
   }, options );
 
+<<<<<<< HEAD
   var This = $(this);
 
   function resize(size) {
@@ -16,27 +17,33 @@ $.fn.dataImg = function(options) {
   }
 
   function breakpoints() {
+=======
+  var elements = $(this);
+>>>>>>> 498308d6e04ad0ad011bced346d1d8d961f341ad
 
+  function getSrc(element) {
     var screen = $(window).width();
+    if (screen > settings.med) { 
+        return element.data('lrg');
+    }
+    else if (screen <= settings.med && screen > settings.sml) {
+        return element.data('med');
+    }
+    return element.data('sml');
+  }
 
-    if (screen > settings.lrg) {
-      var size = This.data('lrg');
-      resize(size);
-    }
-
-    if (screen < settings.lrg) {
-      var size = This.data('lrg');
-      resize(size);
-    }
-    if (screen < settings.med) {
-      var size = This.data('med');
-      resize(size);
-    }
-    if (screen < settings.sml) {
-      var size = This.data('sml');
-      resize(size);
-    }
-
+  function breakpoints() {
+    elements.each(function () {
+        var e = $(this);
+        var src = getSrc(e);
+        if(src != undefined){
+            if (e.is('img')) {
+                e.attr('src', src);
+            } else {
+                e.css('background-image', 'url(' + src + ')');
+            }
+        }        
+    });
   }breakpoints();
 
   if(settings.resize == true){
