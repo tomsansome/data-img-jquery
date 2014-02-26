@@ -1,48 +1,40 @@
-$.fn.dataImg = function(options) {
+$.fn.dataImg = function (options) {
 
-  var settings = $.extend({
-    sml: 400,
-    med: 800,
-    lrg: 1000,
-    resize: false
-  }, options );
+    var settings = $.extend({
+        sml: 400,
+        med: 800,
+        lrg: 1000,
+        resize: false
+    }, options);
 
-  This = $(this);
+    var elements = $(this);
 
-  function resize(size) {
-    This.each(function() {
-      This.attr('src', size);
-    });
-  }
-
-  function breakpoints() {
-
-    var screen = $(window).width();
-
-    if (screen > settings.lrg) {
-      var size = This.data('lrg');
-      resize(size);
+    function getSrc(element) {
+        var screen = $(window).width();
+        if (screen > settings.med) {
+            return element.data('lrg');
+        }
+        else if (screen <= settings.med && screen > settings.sml) {
+            return element.data('med');
+        }
+        return element.data('sml');
     }
 
-    if (screen < settings.lrg) {
-      var size = This.data('lrg');
-      resize(size);
-    }
-    if (screen < settings.med) {
-      var size = This.data('med');
-      resize(size);
-    }
-    if (screen < settings.sml) {
-      var size = This.data('sml');
-      resize(size);
-    }
+    function breakpoints() {
+        elements.each(function () {
+            var e = $(this);
+            var src = getSrc(e);
+            if (e.is('img')) {
+                e.attr('src', src);
+            } else {
+                e.css('background-image', 'url(' + src + ')');
+            }
+        });
+    } breakpoints();
 
-  }breakpoints();
-
-  if(settings.resize == true){
-    $(window).resize(function(){
-      breakpoints();
-    });
-  }
-
+    if (settings.resize == true) {
+        $(window).resize(function () {
+            breakpoints();
+        });
+    }
 };
