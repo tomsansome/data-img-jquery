@@ -16,7 +16,9 @@ $.fn.dataImg = function(options) {
   }
 
   function breakpoints() {
+
   var elements = $(this);
+
   function getSrc(element) {
     var screen = $(window).width();
     if (screen > settings.med) { 
