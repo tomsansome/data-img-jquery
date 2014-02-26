@@ -7,7 +7,6 @@ $.fn.dataImg = function(options) {
     resize: false
   }, options );
 
-<<<<<<< HEAD
   var This = $(this);
 
   function resize(size) {
@@ -17,10 +16,7 @@ $.fn.dataImg = function(options) {
   }
 
   function breakpoints() {
-=======
   var elements = $(this);
->>>>>>> 498308d6e04ad0ad011bced346d1d8d961f341ad
-
   function getSrc(element) {
     var screen = $(window).width();
     if (screen > settings.med) { 
