@@ -7,16 +7,6 @@ $.fn.dataImg = function(options) {
     resize: false
   }, options );
 
-  var This = $(this);
-
-  function resize(size) {
-    This.each(function() {
-      This.attr('src', size);
-    });
-  }
-
-  function breakpoints() {
-
   var elements = $(this);
 
   function getSrc(element) {
