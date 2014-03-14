@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Img - Two Blokes</title>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+  <div id="wrapper">
+
+    <h1 class="title">Data Image Delivery</h1>
+    <h2 class="byline">Tiny jQuery plugin to deal with responsive image delivery. Think responsive.io minus the cdn.
+    </h2>
+
+    <a class="download" href="https://raw2.github.com/twoblokes/data-img-jquery/master/data-img.min.js" target="_blank">Download <small>(0.37kb)</small></a>
+
+    <img 
+      class="data-img"
+      src="http://placehold.it/1x1"
+      data-sml="img/400x320.jpg"
+      data-med="img/800x640.jpg"
+      data-lrg="img/1000x800.jpg"
+    >
+    <small class="image-credit">Image Credit - <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
+
+    <ul class="need-to-know">
+      <li>
+        <h3>Usage</h3>
+<pre>
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">&lt;/script&gt;
+&lt;script src="data-img.min.js">&lt;/script&gt;
+</pre>
+<pre>
+&lt;img 
+  class="data-img"
+  src="http://placehold.it/1x1"
+  data-sml="img/400x320.jpg"
+  data-med="img/800x640.jpg"
+  data-lrg="img/1000x800.jpg"
+&gt;
+</pre>
+<pre>
+&lt;div 
+  class="data-img"
+  style="background-image: url(http://placehold.it/1x1);"
+  data-sml="img/400x320.jpg"
+  data-med="img/800x640.jpg"
+  data-lrg="img/1000x800.jpg"
+&gt;
+</pre>
+        <code>$('.data-img').dataImg();</code>
+      </li>
+
+      <li>
+        <h3>Usage with options</h3>
+        <p>Small, Medium and Large breakpoints. Option for window resize.</p>
+<pre>
+$('.data-img').dataImg({
+  sml: 200,
+  med: 400,
+  lrg: 800,
+  resize: true
+});
+</pre>
+      </li>
+
+      <li>
+        <h3>Defaults</h3>
+<pre>
+$('.data-img').dataImg({
+  sml: 400,
+  med: 800,
+  lrg: 1000,
+  resize: false
+});
+</pre>
+      </li>
+
+      <li>
+        <h3>Configurable options:</h3>
+        <ul>
+          <li><strong>sml:</strong> The breakpoint at which the small file will be shown (default = 400)</li>
+          <li><strong>med:</strong> The breakpoint at which the medium file will be shown (default = 800)</li>
+          <li><strong>lrg:</strong> The breakpoint at which the largest file will be shown, this size will load if screen width is above this (default = 1000)</li>
+          <li><strong>resize:</strong> true/false as to whether this will work on browser resize (default = false)</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>Notes</h3>
+        <p>This plugin is nothing fancy, a very simple/modest swap of 'image src' / 'background-image url' depending on screen width. Ideal for a CMS that spits out a few different sizes for you to use.</p>
+      </li>
+
+      <li class="open">
+        <h3>Open</h3>
+        <p>The MIT License (MIT)</p>
+        <p>Copyright (c) <script>document.write(new Date().getFullYear())</script> copyright Two Blokes</p>
+        <p>
+          Permission is hereby granted, free of charge, to any person obtaining a copy
+          of this software and associated documentation files (the "Software"), to deal
+          in the Software without restriction, including without limitation the rights
+          to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+          copies of the Software, and to permit persons to whom the Software is
+          furnished to do so, subject to the following conditions:
+        </p>
+        <p>
+          The above copyright notice and this permission notice shall be included in
+          all copies or substantial portions of the Software.
+        </p>
+        <p>
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+          THE SOFTWARE.
+        <p>
+      </li>
+
+      <li class="logo">
+        <a href="http://twoblok.es" target="_blank">
+          <img src="img/twoblokes-logo-100h.png">
+        </a><br><br>
+        <a href="https://github.com/twoblokes/data-img-jquery" target="_blank">
+          View on Github
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="data-img.js"></script> 
+
+  <script>
+  $(function(){
+    $('.data-img').dataImg({
+      sml: 400,
+      med: 800,
+      lrg: 1000,
+      resize: true,
+      bgImg: true
+    });
+  });
+  </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28318578-8', 'twoblok.es');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
