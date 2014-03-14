@@ -1,16 +1,16 @@
 {
   "name": "Data Img",
   "version": "1.1.0",
-  "main": ["data-img.min.js"],
+  "main": ["./data-img.min.js"],
   "ignore": 
   [
-    "./demo",
-    "./node_modules",
-    "./.gitignore",
-    "./bower.json",
-    "./Gruntfile.js",
-    "./package.json",
-    "./readme.md"
+    "demo",
+    "node_modules",
+    ".gitignore",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json",
+    "readme.md"
   ],
   "dependencies": { "jquery": "latest" }
 }
